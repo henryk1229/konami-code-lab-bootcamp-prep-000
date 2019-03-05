@@ -11,25 +11,18 @@ const codes = [
   "a"
 ];
 
-function init() { 
-  let index = 0;
-  
+function init() {
+  let idx = 0;
+
   document.body.addEventListener("keydown", (e) => {
     const key = e.key;
     
-    if (key === codes[i]) {
-      index++;
-      
-      if (index === codes.length) {
-        window.alert("Congrats!");
-        
-        index = 0;
-      }
-    } else {
-      index = 0;
+    idx = (codes[idx] === key) ? ++idx : 0;
+    
+    if (idx === codes.length) {
+      window.alert("Hurray!");
+      idx = 0;
     }
+    
   });
 }
-init();
-
-  
