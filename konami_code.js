@@ -12,19 +12,17 @@ const codes = [
 ];
 
 function init() { 
-  let index = 0;
+  let idx = 0
 
   document.body.addEventListener("keydown", (e) => {
-    const key = e.key;
+    const key = e.key
     
-    index = (codes[i] === key) ? ++index : 0;
+    idx = (codes[idx] === key) ? ++idx : 0
     
-    if (index === codes.length) {
-      
+    if (idx === codes.length) {
       window.alert("Hurray!");
-      index = 0;
+      idx = 0
     }
     
   });
 }
-init();  
