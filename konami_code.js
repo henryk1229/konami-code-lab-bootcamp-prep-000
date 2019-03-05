@@ -21,7 +21,12 @@ function init() {
       index++;
       
       if (index === codes.length) {
-        window.alert
+        window.alert("Congrats!");
+        
+        index = 0;
       }
+    } else {
+      index = 0;
     }
-  })
+  }
+  
