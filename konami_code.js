@@ -13,23 +13,18 @@ const codes = [
 
 function init() { 
   let index = 0;
-  
+
   document.body.addEventListener("keydown", (e) => {
     const key = e.key;
     
-    if (key === codes[index]) {
-      index++;
+    index = (codes[index] === key) ? index++ : 0;
+    
+    if (index === codes.length) {
       
-      if (index === codes.length) {
-        window.alert("Congrats!");
-        
-        index = 0;
-      }
-    } else {
+      window.alert("Hurray!");
       index = 0;
     }
+    
   });
 }
-init();
-
   
