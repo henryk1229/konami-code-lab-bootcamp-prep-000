@@ -20,7 +20,7 @@ function init() {
     if (key === codes[index]) {
       index++;
       
-      if (index === codes.length) {
+      if (index - 1 === codes.length) {
         window.alert("Congrats!");
         
         index = 0;
